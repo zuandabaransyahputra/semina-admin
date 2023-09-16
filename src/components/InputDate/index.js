@@ -1,11 +1,10 @@
-import * as React from 'react';
-import { DateRange } from 'react-date-range';
+import * as React from "react";
 
 export default function IndexDate({ date, onChangeDate, setIsShowed }) {
   React.useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   });
 
@@ -22,19 +21,19 @@ export default function IndexDate({ date, onChangeDate, setIsShowed }) {
 
   return (
     <div
-      className='position-absolute'
+      className="position-absolute"
       // style={{ top: '59px' }}
-      style={{ zIndex: '1' }}
+      style={{ zIndex: "1" }}
       ref={refDate}
     >
-      <DateRange
+      {/* <DateRange
         editableDateInputs={true}
         onChange={onChangeDate}
         moveRangeOnFirstSelection={false}
         onRangeFocusChange={check}
         ranges={[date]}
         maxDate={new Date()}
-      />
+      /> */}
     </div>
   );
 }
